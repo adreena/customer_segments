@@ -14286,7 +14286,7 @@ gg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>I can see most of the distributions are skewed toward the origin and are not following a normal pattern. There are a number of data-points in each distrubtion that are very far from the rest and I assume they're mostly outliers.</p>
+<p>I can see most of the distributions are not following a normal pattern, the skew is away from the origin in the right direction. There are a number of data-points in each distrubtion that are very far from the rest and I assume they're mostly outliers.</p>
 <p>For some of the features we can see a linear correlation such as :</p>
 <ul>
 <li>Grocery and Milk are correlated 0.72</li>
@@ -19584,7 +19584,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>Outliers for more than 1 feature: 66,142, 154, 289, 75 </li>
+<li>Outliers for more than 1 feature: 65, 66, 75, 128, 154, 289 </li>
 <li>Ideally it's better to have less noise in the data to have better clusters</li>
 <li>I added all outliers as including the ones that affected features indivudally or they were mutual between a couple of other features. The main reason is their negative effect on PCA becuase PCA always focuses on finding the most variance on the axis and having these outliers can misguide the process of finding main components and eleminating the chance of sensitivity to outliers.</li>
 </ul>
@@ -20031,8 +20031,8 @@ RU5ErkJggg==
 <li>q3 : <ul>
 <li>Dimension #1: has the highest information gain on Detergent_Papers but it also has positive weights Milk/Grocery/Delicatessen for representing some amount of information on them in this dimension, however Frozen/Fresh are not providing enough information in dimension 1 and we'll need other dimensions with better information on these 2 features. Example customer: supermarket or convenience store.</li>
 <li>Dimension #2: has the highest information gain on Frozen/Fresh with good amount of information on Delicatessen. Milk/Grocery are not represented strongly in this dimension due to their low feature-weight and Detergent_Paper lacks information. Example customer: smoothie palces, juicery, restaurant.</li>
-<li>Dimension #3: best represents Delicatessen &amp; Fresh, with less information about Frozen/Detergent_Paper/Grocery spendings. Example customer: meat/cheese marker</li>
-<li>Dimension #4: best represents Delicatessen &amp; Frozen, with less information about Fresh/Detergent_Paper/Grocery spendings. Example customer: frozen prodcuts storage </li>
+<li>Dimension #3: best represents Delicatessen &amp; Fresh and the negative correlation between these 2 features shows customer in this dimension spend a lot on Delicatessen and very little on Fresh, with less information about Frozen/Detergent_Paper/Grocery spendings. Example customer: meat/cheese marker</li>
+<li>Dimension #4: best represents Delicatessen &amp; Frozen and the negative correlation between these 2 features shows customer in this dimension spend a lot on Delicatessen and very little on Frozen, with less information about Fresh/Detergent_Paper/Grocery spendings. Example customer: frozen prodcuts storage </li>
 </ul>
 </li>
 </ul>
